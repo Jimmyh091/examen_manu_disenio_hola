@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listaUsuarios">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannercrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/naranjita">
+
+            <ImageView
+                android:id="@+id/atraslista"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/arrow_back_ios_new_24dp_f2cda2_fill0_wght400_grad0_opsz24"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/listausuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:layout_weight="1"
+            android:text="Lista usuarios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bannercrear" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til1lista"
+            android:layout_marginTop="30dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/borrar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listausuarios">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet1lista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usuario" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/borrar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Borrar"
+            app:cornerRadius="5dp"
+            android:backgroundTint="@color/naranjota"
+            app:layout_constraintBottom_toBottomOf="@+id/til1lista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/til1lista"
+            app:layout_constraintTop_toTopOf="@+id/til1lista" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Esto no se va a ver se sobreesciribirar"
+            app:layout_constraintStart_toStartOf="@+id/til1lista"
+            app:layout_constraintTop_toBottomOf="@+id/til1lista" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
