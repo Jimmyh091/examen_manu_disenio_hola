@@ -13,12 +13,14 @@ import com.google.android.material.textfield.TextInputEditText
 
 class listaUsuarios : AppCompatActivity() {
 
+    private lateinit var listUsuarios : MutableList<ArrayList<String>>
+
     private lateinit var atras : ImageView
 
     private lateinit var tietdelete : TextInputEditText
     private lateinit var borrar : Button
 
-    private lateinit var listUsuarios : TextView
+    private lateinit var usuario : TextView
 
     private lateinit var intentatras : Intent
 
@@ -34,11 +36,11 @@ class listaUsuarios : AppCompatActivity() {
 
         var usuario = intent.getStringArrayListExtra("usuario")
 
-        listUsuarios = findViewById(R.id.listUsuarios)
-        listUsuarios.text = ""
+        usuario = findViewById(R.id.listUsuarios)
+        usuario.text = ""
 
-        for (it in usuario!!){
-            listUsuarios.setText( listUsuarios.text.toString() + "Nombre: ${it.get(0)}, Email: ${it.get(2)}\n\n")
+        for (it in 0 until usuario!!.size){
+            usuario.setText( usuario.text.toString() + "Nombre: ${usuario.get(0)}, Email: ${usuario.get(2)}\n\n")
         }
 
         intentatras = Intent(this, MainActivity::class.java)
