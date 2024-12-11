@@ -27,6 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
+            app:boxStrokeColor="@color/naranjota"
+            app:hintTextColor="@color/naranjota"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login">
@@ -43,6 +45,8 @@
             android:id="@+id/til2main"
             android:layout_width="match_parent"
             android:layout_margin="30dp"
+            app:boxStrokeColor="@color/naranjota"
+            app:hintTextColor="@color/naranjota"
             android:layout_marginTop="15dp"
             app:layout_constraintTop_toBottomOf="@id/til1main"
             android:layout_height="match_parent">
